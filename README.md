@@ -4,11 +4,11 @@
 
 TRS80-ICE is an in circuit hardware emulator for TRS-80 Model 1 and its clones. It is based on Teensy 4.1 microcotroller board and all the functionalities are based on software. It has been started as a fork of [Micro Core Labs MCLZ8](https://github.com/MicroCoreLabs/Projects/tree/master/MCLZ8) and hardware wise it is still the same, but the software part was expanded heavily. Main functionalities:
 
-- Z80 pin compatible in circuit hardware emulator
+- Z80 pin compatible in-circuit hardware emulator
 - Z80 emulation is correct in speed aspect, but not 100% machine cycle accurate.
 - It is possible to load different ROM versions from SD card
 - RAM expansion based on Teensy internal memory
-- Floppy emulation: JV1 floppy images can be stored on SD card. FDC1771 code is based on [calphool TRS80MSX](https://github.com/calphool/TRS80MXS)
+- Floppy emulation: JV1 floppy images can be stored on SD card. FDC1771 code is based on [calphool TRS80MXS](https://github.com/calphool/TRS80MXS)
 - CAS file load from SD card if FDC is not active
 - Turbo mode, RAM and ROM cached in Teensy RAM
 - Interactive menu to select ROM, RAM, images etc...
@@ -23,7 +23,7 @@ The copyright notice above must be included in all copies or substantial portion
 Original copyright notice for parts based on MCL (Z80 emulation) or calphtool (FDC part) must be included:
 
  - MCLZ80: for deatils and copyrights please check MCLZ8.copyright
- - calphool TRS80MSX: for details and copyrights please check fd1771.h
+ - calphool TRS80MXS: for details and copyrights please check fd1771.h
 
 
 ## How to build the hardware?
@@ -52,17 +52,17 @@ In order to compile in Arduino IDE you need the following steps:
 
 ## SD card content
 
-Please rename the file in SD folder and try it with 7zip or other program...
+Please rename the file in SD folder and try it with 7zip or any other program...
 
 ## How to install?
 
-If firmware is ready and you have the SD card just replace the original Z80 with it. TRS-80 has lack of space, you need to seat the Teensy as low as possible, but the best if you solder it to the motherboard directly. Videogenie/HT-1080Z is not so nice as the voltage regulator is blocking the USB port, so MTP won't work. 
+If firmware is ready and you have the SD card just replace the original Z80 with it. TRS-80 has lack of space, you need to seat the Teensy as low as possible, but it is best if you solder it directly to the motherboard. Videogenie/HT-1080Z is not so nice as the voltage regulator is blocking the USB port, so MTP won't work. 
 
 ## How to use it?
 
 Please find [this youtube video](https://youtu.be/LCopyd4x9qo) about it. Also the code contains more details about TRS-80 hardware as well as other things. 
 
-Acceleration mode
+### Acceleration mode
  
    0x0 - All external memory accesses Machine works as a not expanded TRS-80 Model 1. Acceleration can't be turned on from basic
 
